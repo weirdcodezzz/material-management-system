@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace绑定一个对应的Dao接口 -->
+<mapper namespace="com.luo.materialmanagement.mapper.MaterialMapper">
+
+    <resultMap id="materialMap" type="com.luo.materialmanagement.pojo.Material">
+        <id property="id" column="item_id" javaType="Long"/>
+        <result property="code" column="item_code" javaType="String"/>
+        <result property="uom" column="item_uom" javaType="String"/>
+        <result property="description" column="item_description" javaType="String"/>
+        <result property="startActiveDate" column="start_active_date" javaType="java.sql.Date"/>
+        <result property="endActiveDate" column="end_active_date" javaType="java.sql.Date"/>
+        <result property="enabledFlag" column="enabled_flag" javaType="Integer"/>
+        <result property="objectVersionNumber" column="object_version_number" javaType="Long"/>
+        <result property="creationDate" column="creationDate" javaType="java.sql.Timestamp"/>
+        <result property="createdBy" column="created_by" javaType="Long"/>
+        <result property="lastUpdatedBy" column="last_updated_by" javaType="Long"/>
+        <result property="lastUpdateDate" column="last_update_date" javaType="java.sql.Timestamp"/>
+    </resultMap>
+
+    <resultMap id="materialVOMap" type="com.luo.materialmanagement.pojo.MaterialVO">
+        <result property="code" column="item_code" javaType="String"/>
+        <result property="uom" column="item_uom" javaType="String"/>
+        <result property="description" column="item_description" javaType="String"/>
+        <result property="startActiveDate" column="start_active_date" javaType="java.sql.Date"/>
+        <result property="endActiveDate" column="end_active_date" javaType="java.sql.Date"/>
+        <result property="enabledFlag" column="enabled_flag" javaType="Integer"/>
+    </resultMap>
+
+    <sql id="selectSql">
+        select item_code, item_uom, item_description, start_active_date, end_active_date, enabled_flag
+        from material
+    </sql>
+
+
+    <select id="getMaterialList" resultMap="materialVOMap">
+        <include refid="selectSql"></include>
+    </select>
+
+    <select id="getMaterialsByCode" resultMap="materialVOMap">
+        <include refid="selectSql"></include>
+        where item_code=#{code}
+    </select>
+
+
+    <insert id="addMaterial" parameterType="com.luo.materialmanagement.pojo.Material">
+        insert into material(item_code, item_uom, item_description, start_active_date, end_active_date, enabled_flag)
+        values(#{code}, #{uom}, #{description}, #{startActiveDate}, #{endActiveDate}, #{enabledFlag})
+    </insert>
+
+
+    <select id="getMaxItem" resultType="string">
+        select max(substr(item_code, 5)) from material;
+    </select>
+
+    <update id="updateMaterialByCode" parameterType="com.luo.materialmanagement.pojo.Material">
+        update material
+        <set>
+            <if test="uom != null">item_uom=#{uom},</if>
+            <if test="description != null">item_description=#{description},</if>
+            <if test="startActiveDate != null">start_active_date=#{startActiveDate},</if>
+            <if test="endActiveDate != null">end_active_date=#{endActiveDate},</if>
+            <if test="enabledFlag != null">enabled_flag=#{enabledFlag}</if>
+        </set>
+        where item_code=#{code}
+    </update>
+
+    <select id="getMaterialByCondition" resultMap="materialVOMap"
+            parameterType="com.luo.materialmanagement.pojo.Material">
+        <include refid="selectSql"></include>
+        where 1=1
+        <if test="code != null">
+            and item_code=#{code}
+        </if>
+        <if test="uom != null">
+            and item_uom=#{uom}
+        </if>
+        <if test="description != null">
+            and item_description=#{description}
+        </if>
+        <if test="startActiveDate != null">
+            and start_active_date=#{startActiveDate}
+        </if>
+        <if test="endActiveDate != null">
+            and end_active_date=#{endActiveDate}
+        </if>
+        <if test="enabledFlag != null">
+            and enabled_flag=#{enabledFlag}
+        </if>
+    </select>
+
+    <delete id="deleteMaterialByCode" parameterType="string">
+        delete from material
+        where item_code=#{code}
+    </delete>
+
+    <delete id="deleteMaterials" parameterType="list">
+        delete from material
+        where item_code in
+        <foreach collection="codes" item="code" open="(" separator="," close=")">
+            #{code}
+        </foreach>
+    </delete>
+
+
+    <select id="getExportList" parameterType="list" resultMap="materialVOMap">
+        <include refid="selectSql"></include>
+        where item_code in
+        <foreach collection="codeList" item="code" open="(" separator="," close=")">
+            #{code}
+        </foreach>
+    </select>
+
+
+
+</mapper>

@@ -1,0 +1,87 @@
+
+D
+java:S1604‰"(Make this anonymous inner class a lambda(‚óõ¢şÿÿÿÿ
+n
+java:S2177Ç"WRename this method; there is a "private" method in the parent class with the same name.(Ù‡¸Ò
+5
+java:S3457Ş"2nd argument is not used.(ìÙ³©øÿÿÿÿ
+D
+java:S1604´"(Make this anonymous inner class a lambda(âÌé¨üÿÿÿÿ
+s
+java:S2177¾"WRename this method; there is a "private" method in the parent class with the same name.(¼®Ûøÿÿÿÿ
+D
+java:S1604¤"(Make this anonymous inner class a lambda(‚óõ¢şÿÿÿÿ
+C
+java:S4738Ü",Use "java.util.Optional.ofNullable" instead.(ÖŒ”Ü
+?
+java:S1604„"(Make this anonymous inner class a lambda(´”„Í
+n
+java:S2177î"WRename this method; there is a "private" method in the parent class with the same name.(í…ã´
+n
+java:S2177Î"WRename this method; there is a "private" method in the parent class with the same name.(ÅÍ¥
+f
+java:S3416<"KUpdate this logger to use "CustomizeModelAttributeParameterExpander.class".(Ô¾¬Üùÿÿÿÿ
+Q
+java:S1141à"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+z
+java:S2177"^Rename this method or correct the type of the argument(s) to override the parent class method.(íò“Âüÿÿÿÿ
+D
+java:S1604Æ"(Make this anonymous inner class a lambda(‚óõ¢şÿÿÿÿ
+D
+java:S1604€"(Make this anonymous inner class a lambda(‚óõ¢şÿÿÿÿ
+=
+java:S1604V"(Make this anonymous inner class a lambda( ùÏ
+n
+java:S2177Ø"WRename this method; there is a "private" method in the parent class with the same name.(Ğ¼”
+h
+java:S2387B"M"pluginsManager" is the name of a field in "ModelAttributeParameterExpander".(èÙö¬úÿÿÿÿ
+s
+java:S2177’"WRename this method; there is a "private" method in the parent class with the same name.(ª¡Îüÿÿÿÿ
+C
+java:S3011æ",This accessibility update should be removed.(˜ÂÓ˜
+s
+java:S2177š"WRename this method; there is a "private" method in the parent class with the same name.(Şß’‘úÿÿÿÿ
+>
+java:S1604½"(Make this anonymous inner class a lambda(úäÛ
+m
+java:S2177Å"WRename this method; there is a "private" method in the parent class with the same name.(µ¾û!
+D
+java:S1604ü"(Make this anonymous inner class a lambda(Şï’üÿÿÿÿÿ
+s
+java:S2177ˆ"WRename this method; there is a "private" method in the parent class with the same name.(ÈŞïÜÿÿÿÿÿ
+>
+java:S1604Ï"(Make this anonymous inner class a lambda(úäÛ
+D
+java:S1604¿"(Make this anonymous inner class a lambda(ìöó¡ûÿÿÿÿ
+n
+java:S2177Ô"WRename this method; there is a "private" method in the parent class with the same name.(ğŒ­
+n
+java:S2177­"WRename this method; there is a "private" method in the parent class with the same name.(‰ à“
+n
+java:S2177‘"WRename this method; there is a "private" method in the parent class with the same name.(ÎŸ¡¯
+s
+java:S2177ÿ"WRename this method; there is a "private" method in the parent class with the same name.(äƒ±ÿÿÿÿÿ
+n
+java:S2177ø"WRename this method; there is a "private" method in the parent class with the same name.(”ø®
+D
+java:S1604’"(Make this anonymous inner class a lambda(‚óõ¢şÿÿÿÿ
+n
+java:S2177×"WRename this method; there is a "private" method in the parent class with the same name.(¤·ƒ
+n
+java:S2177³"WRename this method; there is a "private" method in the parent class with the same name.(êˆ·å
+D
+java:S1604›"(Make this anonymous inner class a lambda(‚óõ¢şÿÿÿÿ
+n
+java:S2177¤"WRename this method; there is a "private" method in the parent class with the same name.(›¿
+s
+java:S2177¼"WRename this method; there is a "private" method in the parent class with the same name.(êö¼—úÿÿÿÿ
+D
+java:S1604ï"(Make this anonymous inner class a lambda(‚óõ¢şÿÿÿÿ
+?
+java:S1604±"(Make this anonymous inner class a lambda(è¥ñ•
+s
+java:S2177÷"WRename this method; there is a "private" method in the parent class with the same name.(ıñ¬Äùÿÿÿÿ
+?
+java:S1604§"(Make this anonymous inner class a lambda(ò§Ñä
+s
+java:S2177£"WRename this method; there is a "private" method in the parent class with the same name.(”Ğ‘ùÿÿÿÿ
